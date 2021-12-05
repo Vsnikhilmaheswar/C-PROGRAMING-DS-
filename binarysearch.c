@@ -13,7 +13,7 @@ printf("Enter the element to be founded ");
 scanf("%d",&key);
 first=0;
 end=size-1;
-for(first=0;first<=end;first++)
+while(first<=end)
 {
     mid=(first+end)/2;
     if(key<a[mid])
