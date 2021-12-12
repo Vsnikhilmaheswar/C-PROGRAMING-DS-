@@ -1,7 +1,13 @@
+/* ###################################################*/
+/*  AUTHOR:  VS NIKHIL MAHESWAR                       */        
+/*                                                    */
+/*  PROBLEM: Implementation-of-stack                  */
+/*                                                    */          
+/*  DATE   : 28-11-2021                               */
+/*####################################################*/
 #include<stdio.h>
 #include<stdlib.h>
-#define size 5
-int stack[size],top=-1;
+int stack[50],top=-1,size;
  void push()
  {
      int x;
@@ -22,7 +28,7 @@ int stack[size],top=-1;
      int item;
      if(top==-1)
      {
-         printf("stack is underflow\n");
+         printf("stack is underflow\n\n");
      }
      else
      {
@@ -39,7 +45,7 @@ int stack[size],top=-1;
      }
      else
      {
-         printf("\t%d",stack[top]);
+         printf("\t%d\n",stack[top]);
      }
  }
 void display()
@@ -53,22 +59,20 @@ void display()
  {   
     for(i=top;i>=0;i--)
     {
-        printf("%d",stack[i]);
+        printf("\t%d",stack[i]);
     }
  }
 }
 int main()
 {
-
     int opt;
-
+     printf("enter size of the array \n");
+     scanf("%d",&size);
     while(1)
     {
-        printf("1.push\n2.pop\n3.peak\n4.display\n5.exit\n");
+        printf("\n1.push\n2.pop\n3.peak\n4.display\n5.exit\n");
         scanf("%d",&opt);
-        
-    
-    switch (opt)
+        switch (opt)
         {
         case 1:push();
          break;
