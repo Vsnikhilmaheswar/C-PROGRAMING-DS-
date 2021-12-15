@@ -8,30 +8,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 int queue[100],rear=-1,size,front=-1;
-int main()
-{
-    int op;
-    printf("Enter the si1ze of the queue : ");
-    scanf("%d",&size);
-     while(1)
-    {
-        printf("\n1.insert\n2.delete\n3.display\n4.exit\n");
-        scanf("%d",&op);
-        switch (op)
-        {
-        case 1:enqueue();
-         break;
-         case 2:dequeue();
-         break;
-         case 3:display();
-         break;
-         case 4:exit(0);
-        default:
-        printf("\n!!!invalid input!!!\n");
-            break;
-       }
-    }
-}
+
 void enqueue()
 {
     int item;
@@ -87,4 +64,28 @@ void display()
         printf("\t%d",queue[i]);
     }
   }
+}
+int main()
+{
+    int op;
+    printf("Enter the si1ze of the queue : ");
+    scanf("%d",&size);
+     while(1)
+    {
+        printf("\n1.insert\n2.delete\n3.display\n4.exit\n");
+        scanf("%d",&op);
+        switch (op)
+        {
+        case 1:enqueue();
+         break;
+         case 2:dequeue();
+         break;
+         case 3:display();
+         break;
+         case 4:exit(0);
+        default:
+        printf("\n!!!invalid input!!!\n");
+            break;
+       }
+    }
 }
