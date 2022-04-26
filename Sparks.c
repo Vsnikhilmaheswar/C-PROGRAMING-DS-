@@ -29,7 +29,7 @@ int main()
 
         }
     }
-    int matrix[3][size];
+    int matrix[size][3];
     int k=0;
     for(i=0;i<row;++i)
     {
@@ -37,16 +37,16 @@ int main()
         {
             if(array[i][j]!=0)
             {
-                matrix[0][k]=i;
-                matrix[1][k]=j;
-                matrix[2][k]=array[i][j];
+                matrix[k][0]=i;
+                matrix[k][1]=j;
+                matrix[k][2]=array[i][j];
                 k++;
             }
         }
     }
-    for(i=0;i<3;++i)
+    for(i=0;i<size;++i)
     {
-        for(j=0;j<size;++j)
+        for(j=0;j<3;++j)
         {
             printf("%d",matrix[i][j]);
             printf("\t");
