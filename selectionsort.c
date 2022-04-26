@@ -1,30 +1,36 @@
+
 #include<stdio.h>
 int main()
 {
-    int i,limit,j,arr[10],temp;
-    printf("Enter the limit of the array");
-    scanf("%d",&limit);
-    printf("enter the %d elements of the array ",limit);
-    for(i=0;i<limit;i++)
-    {
+    int i,j,size,temp,min;
+    printf("enter the size of the array");
+    scanf("%d",&size);
+int arr[size];
+printf("the %d elements");
+for(i=0;i<size;i++)
+{
     scanf("%d",&arr[i]);
-    }
-    printf("SORTED ARRAY USING SELECTION SORTING : ");
-    for (i = 0;i<limit-1;i++)
+}    
+for ( i = 0; i < size-1; i++)
+{
+    min=i;
+    for(j=i+1;j<size;j++)
     {
-        for(j=i+1;j<limit;j++)
+        if(arr[j]<arr[min])
         {
-           if(arr[i]>arr[j])
-           {
-               temp=arr[i];
-               arr[i]=arr[j];
-               arr[j]=temp;
-           }
-        }
+        min=j;}
     }
-    for (i = 0; i < limit; i++)
+    if(min!=i)
     {
-        printf("%d\t",arr[i]); 
+        temp=arr[i];
+        arr[i]=arr[min];
+        arr[min]=temp;
     }
-return 0;
+
+}
+printf("sorted array :");
+for(i=0;i<size;i++)
+{
+    printf("%d",arr[i]);
+} 
 }
